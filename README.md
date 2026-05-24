@@ -27,7 +27,7 @@ The IO ports are defined in Markdown file as table:
 | R12,P13 | IO_TYPE=LVDS25 PULL_MODE=NONE DRIVE=3.5 BANK_VCCIO=2.5 | o_tmds_data_p[2], tmds_data_p[2] |
 | ...     | ...                                                    | ...                              |
 
-The script extracts the ports from top module and generate the .cst file by name matching:
+The script extracts the ports from top module and generate the `.cst` file by name matching:
 
 ```
 $ python floor_planner.py -md OpenDev_GW2ALV18.md -v test/top.v -cst test/hdmi.cst
@@ -59,4 +59,4 @@ IO_PORT "tmds_data_p[2]" IO_TYPE=LVDS25 PULL_MODE=NONE DRIVE=3.5 BANK_VCCIO=2.5;
 // diff_port: tmds_data_n[2] <--> tmds_data_p[2]
 ```
 
-Diff port is auto-detected.
+Diff port is auto-detected by script.
