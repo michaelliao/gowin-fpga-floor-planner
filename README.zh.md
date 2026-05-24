@@ -1,17 +1,17 @@
 # GOWIN FPGA Floor Planner Tool
 
-生成高云FPGA的引脚布局文件：
+一键生成高云FPGA的引脚布局文件：
 
 ```
 $ python3 floor_planner.py \
-  -md OpenDev_GW2ALV18.md \
+  -md board/OpenDev_GW2ALV18.md \
   -v test/top.v           \
   -cst test/hdmi.cst
 ```
 
 ## 端口描述文件
 
-FPGA的端口在Markdown文件中以表格形式描述：
+FPGA的端口在Markdown文件中以表格形式描述，示例：
 
 | Port    | IO Type                                                | Names                            |
 |---------|--------------------------------------------------------|----------------------------------|
@@ -28,7 +28,7 @@ FPGA的端口在Markdown文件中以表格形式描述：
 脚本从顶层模块自动提取端口名称，然后根据名称匹配端口并生成`.cst`文件：
 
 ```
-$ python3 floor_planner.py -md OpenDev_GW2ALV18.md -v test/top.v -cst test/hdmi.cst
+$ python3 floor_planner.py -md board/OpenDev_GW2ALV18.md -v test/top.v -cst test/hdmi.cst
 
 IO_LOC "sys_clk" T7;
 IO_PORT "sys_clk" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
