@@ -5,7 +5,7 @@
 Generate GoWin FPGA floor planner file:
 
 ```
-$ python floor_planner.py \
+$ python3 floor_planner.py \
   -md OpenDev_GW2ALV18.md \
   -v test/top.v           \
   -cst test/hdmi.cst
@@ -30,7 +30,7 @@ The IO ports are defined in Markdown file as table:
 The script extracts the ports from top module and generate the `.cst` file by name matching:
 
 ```
-$ python floor_planner.py -md OpenDev_GW2ALV18.md -v test/top.v -cst test/hdmi.cst
+$ python3 floor_planner.py -md OpenDev_GW2ALV18.md -v test/top.v -cst test/hdmi.cst
 
 IO_LOC "sys_clk" T7;
 IO_PORT "sys_clk" IO_TYPE=LVCMOS33 PULL_MODE=UP BANK_VCCIO=3.3;
